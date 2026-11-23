@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chizy Auto Styling – Auto spares, 4x4 accessories &amp; styling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&amp;family=Barlow:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#121212;--line:#2a2a2a;--text:#f4f4f4;--mute:#a8a8a8;--red:#e3120b;--red2:#ff3b30;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Barlow,system-ui,sans-serif}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:800;line-height:1;margin:0;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.flag{height:28px;background:conic-gradient(#fff 25%,#000 0 50%,#fff 0 75%,#000 0) 0 0/28px 28px;opacity:.9;border-block:1px solid var(--line)}
+header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--red);padding-top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#000;z-index:30}
+header .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 22px "Barlow Condensed",sans-serif;white-space:nowrap}
+.brand img{width:44px;height:44px}
+nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{padding:10px 12px;text-decoration:none;font-weight:600;color:var(--mute);white-space:nowrap}
+nav a:hover,nav a:focus-visible{color:#fff}
+.btn{display:inline-block;background:var(--red);color:#fff;font:800 19px "Barlow Condensed",sans-serif;letter-spacing:.04em;padding:14px 26px;border:2px solid var(--red);text-decoration:none;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--red2)}
+.btn.ghost{background:transparent;border-color:#fff}.btn.ghost:hover{background:#fff;color:#000}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.hero{padding:56px 0 64px;background:radial-gradient(60% 80% at 80% 40%,rgba(227,18,11,.28),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(52px,9vw,104px);text-transform:uppercase}
+.hero h1 span{color:var(--red)}
+.hero p{color:var(--mute);max-width:46ch;font-size:19px;margin:20px 0 28px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .logo{width:100%;max-width:380px;justify-self:center;filter:drop-shadow(0 0 40px rgba(227,18,11,.45))}
+section{padding:72px 0}
+section h2{font-size:clamp(38px,6vw,60px);text-transform:uppercase;margin-bottom:12px}
+section h2::after{content:"";display:block;width:72px;height:6px;background:var(--red);margin-top:12px}
+.lead{color:var(--mute);max-width:60ch;margin:16px 0 36px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border:1px solid var(--line)}
+.services div{padding:26px;border:1px solid var(--line);background:var(--panel)}
+.services h3{font-size:28px;margin-bottom:8px;color:#fff}
+.services p{margin:0;color:var(--mute);font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-bottom:4px solid var(--red);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.card div{padding:16px 18px 20px}
+.card h3{font-size:25px}
+.card p{margin:4px 0 10px;color:var(--mute);font-size:15px}
+.price{font:800 26px "Barlow Condensed",sans-serif;color:var(--red2)}
+.card a{display:inline-block;margin-top:6px;font-weight:600;color:#fff;text-underline-offset:4px}
+.note{color:var(--mute);font-size:14px;margin-top:20px}
+.about{background:var(--panel);border-block:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about ul{list-style:none;margin:0;padding:0}
+.about li{padding:14px 0 14px 22px;border-bottom:1px solid var(--line);position:relative}
+.about li::before{content:"";position:absolute;left:0;top:25px;width:10px;height:10px;background:var(--red)}
+form{display:grid;gap:14px;max-width:640px}
+label{font-weight:600;font-size:15px;display:grid;gap:6px}
+input,select,textarea{font:inherit;color:#fff;background:#0c0c0c;border:1px solid #444;padding:13px 14px;border-radius:0;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--red);outline:2px solid var(--red)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+dl{margin:0}dt{font:800 22px "Barlow Condensed",sans-serif;color:var(--red2);margin-top:18px}dd{margin:2px 0 0}
+dd a{text-underline-offset:4px}
+.map{border:1px solid var(--line);background:var(--panel);padding:32px;display:flex;flex-direction:column;justify-content:center;gap:16px;border-left:6px solid var(--red)}
+.map p{margin:0;font-size:20px}
+footer{border-top:2px solid var(--red);padding:28px 0 36px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer img{width:40px;vertical-align:middle;margin-right:10px}
+@media(max-width:760px){.hero .wrap,.about .wrap,.find .wrap{grid-template-columns:1fr}.hero .logo{max-width:240px;order:-1}.row{grid-template-columns:1fr}.brand span{display:none}section{padding:52px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<header><div class="wrap">
+<a class="brand" href="#top"><img src="logo.png" alt="Chizy Auto Styling logo"><span>Chizy Auto Styling</span></a>
+<nav aria-label="Main"><a href="#services">Services</a><a href="#products">Products</a><a href="#about">About</a><a href="#enquiry">Enquiry</a><a href="#directions">Directions</a></nav>
+</div></header>
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Uniqueness<br>at <span>best price</span></h1>
+<p>New and used auto spares, 4x4 accessories and styling for your car or bakkie. Body kits, exhausts, nudge bars, spoilers and more.</p>
+<div class="cta"><a class="btn" href="#enquiry">Send an enquiry</a><a class="btn ghost" href="#directions">Get directions</a></div>
+</div>
+<img class="logo" src="logo.png" alt="Chizy Auto Styling – for all your vehicle &amp; 4x4 accessories">
+</div></div>
+<div class="flag" aria-hidden="true"></div>
+
+<section id="services"><div class="wrap">
+<h2>What we do</h2>
+<p class="lead">Everything to make your vehicle look and sound the way you want it.</p>
+<div class="services">
+<div><h3>Auto styling</h3><p>Body kits, spoilers, diffusers, front lips, window louvres, grille badges and stickers for hatchbacks and sedans.</p></div>
+<div><h3>4x4 accessories</h3><p>Nudge bars, side steps and styling bars for Ford Ranger, Toyota Hilux, Isuzu D-Max and more.</p></div>
+<div><h3>Exhausts</h3><p>Universal exhaust tips, sold individually, in a black finish.</p></div>
+<div><h3>New &amp; used spares</h3><p>Looking for a part? Ask us. We stock new and used auto spares.</p></div>
+</div></div></section>
+
+<section id="products" style="background:var(--panel);border-block:1px solid var(--line)"><div class="wrap">
+<h2>Popular products</h2>
+<p class="lead">A selection from our WhatsApp catalogue. Tap “Ask about this” and we’ll confirm stock and fitment.</p>
+<div class="grid">
+<article class="card"><img src="golf-7r.jpg" alt="White Golf 7R fitted with body kit" loading="lazy"><div><h3>Golf 7R full body kit</h3><p>Boot spoiler, mirror covers, side skirts, window louvres, diffuser, front lip, bumper trims.</p><span class="price">R1 000</span><br><a href="#enquiry" data-item="Golf 7R full body kit">Ask about this</a></div></article>
+<article class="card"><img src="exhaust.jpg" alt="Black universal exhaust tips" loading="lazy"><div><h3>Universal exhaust tips</h3><p>Black finish. Price is for each.</p><span class="price">R1 500</span><br><a href="#enquiry" data-item="Universal exhaust tips">Ask about this</a></div></article>
+<article class="card"><img src="ranger-t6.jpg" alt="Ford Ranger with side steps and graphics" loading="lazy"><div><h3>Ford Ranger T6 accessories</h3><p>Side steps and more.</p><span class="price">R3 000</span><br><a href="#enquiry" data-item="Ford Ranger T6 accessories">Ask about this</a></div></article>
+<article class="card"><img src="ranger-styling-bar.jpg" alt="Ford Ranger styling bar in black" loading="lazy"><div><h3>Ford Ranger styling bar</h3><p>Front nudge bar in black. Fits T6, T7, T8 and T9. Non-OEM.</p><span class="price">R3 500</span><br><a href="#enquiry" data-item="Ford Ranger styling bar">Ask about this</a></div></article>
+<article class="card"><img src="bmw-f22.jpg" alt="BMW F22 with accessories" loading="lazy"><div><h3>BMW F22 accessories</h3><p>Available in store.</p><span class="price">R1 000</span><br><a href="#enquiry" data-item="BMW F22 accessories">Ask about this</a></div></article>
+<article class="card"><img src="bmw-x5.jpg" alt="Silver BMW X5 with boot spoiler" loading="lazy"><div><h3>BMW X5 accessories</h3><p>Boot spoiler and more.</p><span class="price">R1 000</span><br><a href="#enquiry" data-item="BMW X5 accessories">Ask about this</a></div></article>
+</div>
+<p class="note">Prices are as listed in our catalogue and may change. We also do Polo 6 accessories, Isuzu D-Max grilles and more. Ask for the full list.</p>
+</div></section>
+
+<section id="about" class="about"><div class="wrap">
+<div><h2>About us</h2>
+<p class="lead" style="margin-bottom:0">Chizy Auto Styling is an automotive body shop in Johannesburg serving Gauteng. We specialise in new and used auto spares, 4x4 accessories and auto styling, for all your vehicle needs, at the best price.</p></div>
+<ul>
+<li>Cars, bakkies and 4x4s: VW, BMW, Ford, Toyota, Isuzu and more</li>
+<li>Walk in, or send us your vehicle model on WhatsApp</li>
+<li>Fitment and stock confirmed before you pay</li>
+<li>Open today 9:00 am to 5:00 pm</li>
+</ul>
+</div></section>
+
+<section id="enquiry"><div class="wrap">
+<h2>Enquiry</h2>
+<p class="lead">Tell us what you’re after. Sending opens WhatsApp with your message ready, so you can reply to us right away.</p>
+<form id="f">
+<div class="row"><label>Your name<input id="n" required autocomplete="name"></label>
+<label>Phone number<input id="p" type="tel" autocomplete="tel"></label></div>
+<div class="row"><label>Vehicle make and model<input id="v" placeholder="e.g. Golf 7R, Ranger T6" required></label>
+<label>Interested in<select id="i"><option>Body kit / styling</option><option>4x4 accessories</option><option>Exhaust</option><option>Spare part (new or used)</option><option>Something else</option></select></label></div>
+<label>Message<textarea id="m" rows="4" placeholder="Part, year, colour, budget…"></textarea></label>
+<button class="btn" type="submit">Send on WhatsApp</button>
+</form>
+</div></section>
+
+<section id="directions" class="find" style="background:var(--panel);border-top:1px solid var(--line)"><div class="wrap">
+<div><h2>Find us</h2>
+<dl>
+<dt>Address</dt><dd>Pretoria Road, Johannesburg, 1414<br>South Africa</dd>
+<dt>Hours</dt><dd>9:00 am to 5:00 pm</dd>
+<dt>Call</dt><dd><a href="tel:+27100231729">010 023 1729</a></dd>
+<dt>WhatsApp</dt><dd><a href="https://wa.me/27670227499">+27 67 022 7499</a> (contact Praise)<br><a href="https://wa.me/27730757146">+27 73 075 7146</a></dd>
+<dt>Email</dt><dd><a href="mailto:info@chizyautostyling.co.za">info@chizyautostyling.co.za</a></dd>
+</dl></div>
+<div class="map"><p>Open the route from where you are to our shop in Google Maps.</p>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chizy+Auto+Styling+Pretoria+Road+Johannesburg+1414">Get directions</a>
+<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Chizy+Auto+Styling+Pretoria+Road+Johannesburg+1414">View on map</a></div>
+</div></section>
+</main>
+<div class="flag" aria-hidden="true"></div>
+<footer><div class="wrap"><span><img src="logo.png" alt="">© <span id="y">2026</span> Chizy Auto Styling</span><span>Serving Gauteng</span></div></footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-item]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('m').value='I’m interested in: '+a.dataset.item+'. Is it in stock?'})});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+var g=function(id){return document.getElementById(id).value.trim()};
+var t='Hi Chizy Auto Styling, my name is '+g('n')+'.\nVehicle: '+g('v')+'\nInterested in: '+g('i')+(g('p')?'\nPhone: '+g('p'):'')+(g('m')?'\n'+g('m'):'');
+window.open('https://wa.me/27670227499?text='+encodeURIComponent(t),'_blank','noopener')});
+</script></body></html>
